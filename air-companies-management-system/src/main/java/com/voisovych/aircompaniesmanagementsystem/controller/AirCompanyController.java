@@ -21,7 +21,7 @@ public class AirCompanyController {
     @PutMapping("/addNewAirCompany")
     public ResponseEntity<String> addNewAirCompany(@RequestBody AirCompany airCompany) {
         airCompanyService.addNewAirCompany(airCompany);
-        return ResponseEntity.ok("Employee Created Successfully!!!");
+        return ResponseEntity.ok("Air company Created Successfully!!!");
     }
 
     @GetMapping("/findAllAirCompany")

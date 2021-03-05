@@ -23,4 +23,6 @@ public interface FlightRepository extends CrudRepository<Flight, Long> {
 
     @Query("SELECT f FROM Flight f WHERE f.flightStatus = :status")
     List<Flight> findFlightWithStatusCompleted(@Param("status") Status status);
+
+    List<Flight> findAllByAirPlaneId(long id);
 }
