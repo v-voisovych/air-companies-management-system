@@ -1,0 +1,380 @@
+{
+	"info": {
+		"_postman_id": "777832f7-8a86-4758-b669-3360e3859c0e",
+		"name": "my collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PUT requests",
+			"item": [
+				{
+					"name": "localhost:8080/addNewAirCompany",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"YanAir\",\r\n    \"companyType\":\"transport\",\r\n    \"foundedAt\":\"2012-07-10T09:00:38\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/addNewAirCompany",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"addNewAirCompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/addNewAirplane?airCompanyName=YanAir",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"An\",\r\n    \"factorySerialNumber\": \"a839\",\r\n    \"numberOfFlights\": 200,\r\n    \"flightDistance\": 10000,\r\n    \"fuelCapacity\": 500000,\r\n    \"type\": \"commercial\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/addNewAirplane?airCompanyName=YanAir",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"addNewAirplane"
+							],
+							"query": [
+								{
+									"key": "airCompanyName",
+									"value": "YanAir"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/addNewFlight?factorySerialNumber=a839",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numberOfFlight\": \"a839\",\r\n    \"departureCountry\": \"USA\",\r\n    \"destinationCountry\": \"Ukraine\",\r\n    \"distance\": 112255,\r\n    \"estimatedFlightTime\":\"20:50\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/addNewFlight?factorySerialNumber=a839",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"addNewFlight"
+							],
+							"query": [
+								{
+									"key": "factorySerialNumber",
+									"value": "a839"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST requests",
+			"item": [
+				{
+					"name": "localhost:8080/updateAirCompany",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"YanAir\",\r\n    \"companyType\":\"private\",\r\n    \"foundedAt\":\"2020-04-10T09:00:38\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/updateAirCompany",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"updateAirCompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/changeAirCompany?factorySerialNumber=789&airCompanyName=YanAir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/changeAirCompany?factorySerialNumber=789&airCompanyName=YanAir",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"changeAirCompany"
+							],
+							"query": [
+								{
+									"key": "factorySerialNumber",
+									"value": "789"
+								},
+								{
+									"key": "airCompanyName",
+									"value": "YanAir"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/changeStatus?numberOfFlight=a83922&newStatus=ACTIVE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/changeStatus?numberOfFlight=a83922&newStatus=ACTIVE",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"changeStatus"
+							],
+							"query": [
+								{
+									"key": "numberOfFlight",
+									"value": "a83922"
+								},
+								{
+									"key": "newStatus",
+									"value": "ACTIVE"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DELETE requests",
+			"item": [
+				{
+					"name": "localhost:8080/deleteAirCompany?name=Windrrose",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"company\":\"pekabex\",\r\n    \"resource\":\"Stepan\",\r\n    \"time\":\"2020-08-04T10:20:30\",\r\n    \"longitude\":258,\r\n    \"latitude\":369\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/deleteAirCompany?name=Windrrose",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deleteAirCompany"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Windrrose"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET requests",
+			"item": [
+				{
+					"name": "localhost:8080/findAllAirCompany",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/findAllAirCompany",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"findAllAirCompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/findAirCompanyByName?name=YanAir",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/findAirCompanyByName?name=YanAir",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"findAirCompanyByName"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "YanAir"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/flightWithStatusActive",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/flightWithStatusActive",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"flightWithStatusActive"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/findAirCompanyFlights?airCompanyName=Air&status=DELAYED",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/findAirCompanyFlights?airCompanyName=USAAir&status=DELAYED",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"findAirCompanyFlights"
+							],
+							"query": [
+								{
+									"key": "airCompanyName",
+									"value": "USAAir"
+								},
+								{
+									"key": "status",
+									"value": "DELAYED"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/flightWithStatusCompleted",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/flightWithStatusCompleted",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"flightWithStatusCompleted"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/allFlights",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/allFlights",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"allFlights"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/allAirplane",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/allAirplane",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"allAirplane"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

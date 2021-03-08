@@ -1,0 +1,33 @@
+version: "3"
+services: 
+  mysqldb:
+    image: mysql
+    container_name: mysqldb
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    ports: 
+      - "3306:3306"
+    networks: 
+      - air_companies_management_system-networks
+    environment: 
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: air_companies_management_system
+      MYSQL_PASSWORD: root
+      
+  system:
+    image: voisovych/air_companies_management_system
+    container_name: management_system
+    restart: always
+    ports: 
+      - "8080:8080"
+    networks: 
+      - air_companies_management_system-networks
+    depends_on:
+      - mysqldb
+    links: 
+      -  mysqldb
+
+networks: 
+  air_companies_management_system-networks:
+
+  
