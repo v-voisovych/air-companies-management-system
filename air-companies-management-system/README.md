@@ -12,7 +12,9 @@ PUT  localhost:8080/addNewAirCompany – endpoint for creating new air company, 
 }
 
 GET localhost:8080/findAllAirCompany – endpoint returns all air company;
+
 GET localhost:8080/findAirCompanyByName -endpoint returns one air company, it accepts one param: name;
+
 POST localhost:8080/updateAirCompany - accepts json: 
 {
     "name":"Windrrose",
@@ -44,9 +46,14 @@ PUT localhost:8080/addNewFlight – creates new flight, takes param: factorySeri
 }
 
 POST localhost:8080/changeStatus – changes status of flight, takes two params: numberOfFlight(factory serial number of airplane) and newStatus(new status);
+
 GET localhost:8080/flightWithStatusActive – returns flights with status ACTIVE and started more than 24 hours ago.
+
 GET localhost:8080/findAirCompanyFlights – returns Air Company Flights by status, takes two params: airCompanyName and status;
-GET localhost:8080/flightWithStatusCompleted – returns all Flights in COMPLETED status where difference between
-started and ended time is bigger than estimated flight time.
+
+GET localhost:8080/flightWithStatusCompleted – returns all Flights in COMPLETED status where difference between started and ended time is bigger than estimated flight time.
+
 GET localhost:8080/allFlights - returns all flights.
+
 GET localhost:8080/allAirplane – returns all airplans. 
+
