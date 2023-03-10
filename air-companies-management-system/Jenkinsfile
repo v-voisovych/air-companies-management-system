@@ -3,8 +3,8 @@
 
 node {
     stage('Preparation') {
-        sh "echo'${VDP_ARTIFACT_NAME}'"
-        sh "echo'${VDP_ARTIFACT_JARS}'"
-        sh "echo'${VDP_COMPILATION_ENV_BUILD_NAME}'"
+        sh "echo '${VDP_ARTIFACT_NAME}'"
+        sh "echo '${VDP_ARTIFACT_JARS}'"
+        sh "echo '${VDP_COMPILATION_ENV_BUILD_NAME}'"
     }
 }
