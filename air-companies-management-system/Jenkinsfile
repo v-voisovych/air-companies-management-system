@@ -1,0 +1,8 @@
+#!groovy
+//library('sima-jenkins-lib')
+
+node {
+    stage('Preparation') {
+        sh 'printenv'
+    }
+}
